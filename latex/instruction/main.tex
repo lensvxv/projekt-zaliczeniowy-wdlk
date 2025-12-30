@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[polish]{babel}      
+\usepackage[utf8]{inputenc}     
+\usepackage[T1]{fontenc}        
+\usepackage{lmodern}            
+
+\usepackage{geometry}           
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=25mm,
+    top=25mm,
+}
+\usepackage{graphicx}           
+\usepackage{float}              
+\usepackage{xcolor}             
+\usepackage{titlesec}           
+\usepackage{hyperref}           
+
+\graphicspath{ {./screenshots/} }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Instrukcja GitHub Desktop},
+}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{darkgray}}{\thesection}{1em}{}
+
+\title{
+    \vspace{2cm}
+    \Huge \textbf{Instrukcja Obsługi}\\
+    \LARGE Aplikacja GitHub Desktop
+    \vspace{1cm}
+}
+\author{\textit{Dział IT / Wsparcie Techniczne}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} 
+
+\vfill
+\begin{center}
+    \large Dokumentacja techniczna v1.0
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Wstęp}
+GitHub Desktop to aplikacja z graficznym interfejsem użytkownika (GUI), która ułatwia pracę z systemem kontroli wersji Git. Niniejsza instrukcja krok po kroku przeprowadzi Cię przez kluczowe funkcjonalności programu, pozwalając na efektywne zarządzanie kodem bez konieczności używania wiersza poleceń.
+
+\section{Klonowanie Repozytorium}
+Aby rozpocząć pracę nad istniejącym projektem, należy go najpierw sklonować (pobrać) na dysk lokalny.
+
+\begin{enumerate}
+    \item Uruchom aplikację GitHub Desktop.
+    \item Kliknij w menu \textbf{File} i wybierz opcję \textbf{Clone repository...} (lub użyj skrótu \texttt{Ctrl+Shift+O}).
+    \item W otwartym oknie wybierz zakładkę \textbf{GitHub.com}, znajdź swoje repozytorium na liście i zaznacz je.
+    \item Wskaż ścieżkę lokalną (Local path), gdzie pliki mają zostać zapisane.
+    \item Kliknij przycisk \textbf{Clone}.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{clone.png}
+    \caption{Okno klonowania repozytorium w GitHub Desktop.}
+    \label{fig:clone}
+\end{figure}
+
+\section{Praca z Gałęziami (Branching)}
+Dobrą praktyką jest praca na osobnych gałęziach (branch) dla każdej nowej funkcjonalności, aby nie modyfikować bezpośrednio gałęzi głównej (main/master).
+
+\begin{enumerate}
+    \item Kliknij przycisk \textbf{Current Branch} na górnym pasku narzędzi.
+    \item Wpisz nazwę nowej gałęzi w polu tekstowym (np. \texttt{feature-logowanie}).
+    \item Kliknij przycisk \textbf{New Branch}.
+    \item Jeśli aplikacja zapyta, czy przenieść obecne zmiany, wybierz \textit{Bring my changes...} lub \textit{Leave my changes...} zależnie od potrzeby.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{branch.png}
+    \caption{Tworzenie nowej gałęzi.}
+    \label{fig:branch}
+\end{figure}
+
+\section{Tworzenie Commitów}
+Po wprowadzeniu zmian w plikach (edycja kodu, dodanie grafik), należy je zatwierdzić (zrobić commit).
+
+\begin{enumerate}
+    \item Po lewej stronie w panelu \textbf{Changes} zobaczysz listę zmodyfikowanych plików.
+    \item Zaznacz pliki, które chcesz dołączyć do commita (domyślnie zaznaczone są wszystkie).
+    \item W polu \textbf{Summary} (wymagane) wpisz krótki tytuł zmiany.
+    \item W polu \textbf{Description} (opcjonalne) możesz dodać szerszy opis.
+    \item Kliknij niebieski przycisk \textbf{Commit to <nazwa-gałęzi>}.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{commit.png}
+    \caption{Panel zatwierdzania zmian (Commit).}
+    \label{fig:commit}
+\end{figure}
+
+\section{Synchronizacja (Push/Pull)}
+Zmiany zatwierdzone lokalnie (commit) muszą zostać wysłane na serwer (Push), aby inni mogli je zobaczyć. Należy również pobierać zmiany innych (Pull).
+
+\subsection{Wysyłanie zmian (Push)}
+Jeśli masz nowe commity lokalnie, na górnym pasku pojawi się przycisk \textbf{Push origin}. Kliknij go, aby wysłać zmiany na GitHub.
+
+\subsection{Pobieranie zmian (Fetch/Pull)}
+Aby sprawdzić, czy są nowe zmiany na serwerze, kliknij \textbf{Fetch origin}. Jeśli pojawią się nowe zmiany, przycisk zmieni się na \textbf{Pull origin}. Kliknij go, aby zaktualizować lokalne pliki.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{push.png}
+    \caption{Przycisk synchronizacji (Push/Fetch) na górnym pasku.}
+    \label{fig:push}
+\end{figure}
+
+\section{Tworzenie Pull Request (PR)}
+Gdy skończysz pracę na swojej gałęzi i wyślesz ją na serwer (Push), możesz utworzyć prośbę o włączenie zmian (Pull Request).
+
+\begin{enumerate}
+    \item Upewnij się, że Twoja gałąź jest opublikowana na serwerze.
+    \item Kliknij przycisk \textbf{Create Pull Request} (znajdziesz go na głównym ekranie po zrobieniu Push lub w menu \textbf{Branch}).
+    \item Aplikacja otworzy przeglądarkę internetową ze stroną GitHub.
+    \item Uzupełnij opis PR i kliknij \textbf{Create pull request} na stronie www.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pr.png}
+    \caption{Przycisk inicjujący tworzenie Pull Request.}
+    \label{fig:pr}
+\end{figure}
+
+\newpage
+\section{Podsumowanie}
+Powyższa instrukcja pokrywa podstawowy cykl pracy developera: pobranie kodu, stworzenie gałęzi, zapisanie zmian, synchronizację oraz zgłoszenie zmian do weryfikacji. Regularne wykonywanie operacji \textbf{Fetch} oraz częste \textbf{Commity} to klucz do uniknięcia konfliktów w kodzie.
+
+\end{document}
