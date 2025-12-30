@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Czesc 1}{1}{}%
+\contentsline {section}{Wprowadzenie}{3}{}%
+\contentsline {section}{\numberline {2}Podstawy teoretyczne: System operacyjny}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Czym jest system operacyjny?}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Serce systemu, czyli jądro (kernel)}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Dwa światy: Linux vs. Windows}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Porównanie jąder systemowych}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Zalety i wady obu systemów}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Przykłady wykorzystania}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Świat Linuksa: Dystrybucje}{4}{}%
+\contentsline {section}{\numberline {3}Podstawowe komendy w systemie Linux}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Powłoka systemowa: Bash}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Struktura poleceń: opcje i argumenty}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Polecenia informacyjne}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Nawigacja i listowanie plików}{6}{}%
+\contentsline {subsection}{\numberline {3.5}Zarządzanie plikami i katalogami}{7}{}%
+\contentsline {subsection}{\numberline {3.6}Przeglądanie i przetwarzanie plików}{7}{}%
+\contentsline {subsubsection}{\numberline {3.6.1}Wyszukiwanie tekstu: polecenie \texttt {grep}}{8}{}%
+\contentsline {subsubsection}{\numberline {3.6.2}Wyszukiwanie plików – Polecenie \texttt {find}}{8}{}%
