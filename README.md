@@ -1,5 +1,5 @@
 # Projekt Zaliczeniowy: Profesjonalne Repozytorium Projektowe
-### [cite_start]Wprowadzenie do pracy w systemie Linux [cite: 3]
+### Wprowadzenie do pracy w systemie Linux
 
 ## Cel Projektu
 Głównym celem projektu jest praktyczne zastosowanie wiedzy z zakresu systemów Linux, automatyzacji w powłoce Bash, profesjonalnego składu tekstu w systemie LaTeX oraz zaawansowanej kontroli wersji Git. Repozytorium zostało zaprojektowane jako cyfrowe portfolio, demonstrujące dbałość o strukturę, historię zmian oraz czytelną dokumentację techniczną.
